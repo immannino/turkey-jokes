@@ -1,0 +1,11 @@
+@media (min-width: 600px) {
+    .desktop-size {
+        font-size: 4rem;
+    }
+
+    .desktop-question {
+        width: 60%;
+        padding: 1em;
+        font-size: 4rem;
+    }
+}

@@ -3,12 +3,42 @@
 <head>
   <meta charset="utf-8">
   <title>TurkeyJokes</title>
-  <base href="/">
+  <base href="./">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cabin+Condensed" rel="stylesheet">
+  <meta name="theme-color" content="#1976d2">
 </head>
-<body>
-  <app-root></app-root>
+<body class="bg-dark-beige">
+  <app-root>
+      <button id="pwa" class="vintage hidden">Install PWA</button>
+      <script>
+        let deferredPrompt;
+        let butt = document.getElementById('pwa');
+        window.addEventListener('beforeinstallprompt', (e) => {
+          e.preventDefault();
+          deferredPrompt = e;
+          butt.style.disply = 'block';
+        });
+        butt.addEventListener('click', (e) => {
+          butt.style.display = 'none';
+          deferredPrompt.promp();
+          deferredPrompt.userChoice.then((result) => {
+            if (result.outcome === 'accepted') {
+              console.log('User accepted the A2HS prompt');
+            } else {
+              console.log('User dismissed the A2HS prompt');
+            }
+    
+            deferredPrompt = null;
+          });
+        });
+      </script>
+  </app-root>
+  <noscript>Please enable JavaScript to continue using this application.</noscript>
 </body>
 </html>

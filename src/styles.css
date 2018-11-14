@@ -1,1 +1,113 @@
 /* You can add global styles to this file, and also import other style files */
+
+.light-beige {
+    color: #F7EFD4;
+}
+
+.bg-light-beige {
+    background-color: #F7EFD4;
+}
+
+.beige {
+    color: #FADDAF;
+}
+
+.bg-beige {
+    background-color: #FADDAF;
+}
+
+.orange {
+    color: #EB712F;
+}
+
+.bg-orange {
+    background-color: #EB712F;
+}
+
+.dark-orange {
+    color: #91371B;
+}
+.bg-dark-orange {
+    background-color: #91371B;
+}
+.border-dark-orange {
+    border-color: #91371B;
+}
+.brown {
+    color: #472C25;
+}
+.bg-brown {
+    background-color: #472C25;
+}
+
+.dark-beige {
+    color: #D4C2B2;
+}
+
+.bg-dark-beige {
+    background-color: #D4C2B2;
+}
+
+.vintage {
+    border-style: outset;
+    border-width: 5px;
+    background-color: lightgray;
+    border-color: grey;
+}
+
+.vintage:active {
+    border-style: inset;
+}
+
+.vintage:disabled {
+    background-color: darkgray;
+    border-color: grey;
+    cursor: not-allowed;
+}
+
+.pacifico {
+    font-family: 'Pacifico', cursive;
+}
+
+.cabin {
+    font-family: 'Cabin Condensed', sans-serif;
+}
+
+.box-shadow {
+    box-shadow: 5px 5px #91371B;
+    border: 2px solid #91371B;
+}
+.hidden {
+    display: none;
+}
+
+@media (min-width: 600px) {
+    .vintage {
+        border-style: outset;
+        font-size: 3rem;
+        border-width: 15px;
+        background-color: lightgray;
+        border-color: grey;
+    }
+    
+    .vintage:active {
+        border-style: inset;
+    }
+    
+    .vintage:disabled {
+        background-color: darkgray;
+        border-color: grey;
+        cursor: not-allowed;
+    }
+    
+    .desktop-header {
+        width: 60%;
+        padding: 1.5em;
+        font-size: 4rem;
+    }
+    
+    .box-shadow {
+        box-shadow: 12px 12px #91371B;
+        border: 5px solid #91371B;
+    }
+}

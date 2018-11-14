@@ -1,0 +1,22 @@
+<div class="h-100 w-100">
+    <div class="bg-brown pa4 flex justify-around shadow-1">
+        <button class="vintage" routerLink="/welcome">Exit</button>
+        <section class="pacifico white f3 desktop-size">thanksgiving</section>
+        <button class="vintage" (click)="reset()">Reset</button>
+    </div>
+    <div *ngIf="activeJoke" class="pa3 center">
+        <div class="box-shadow bg-light-beige cabin f2 pa2 desktop-question center">
+            <div>{{activeJoke.question}}</div>
+
+            <div *ngIf="state.shouldShowAnswer" class="pa3 cabin">
+                <div class="rotate b--dashed border-dark-orange bg-white pa2">
+                        {{activeJoke.answer}}
+                </div>
+            </div>
+        </div>
+        <div class="pa4 flex justify-around">
+            <button class="vintage pa1" (click)="showAnswer();" [disabled]="!state.isAnswerButtonEnabled">{{state.answerButtonText}}</button>
+            <button class="vintage pa1" (click)="getNextJoke();">Next</button>
+        </div>
+    </div>
+</div>

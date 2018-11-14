@@ -1,0 +1,11 @@
+.logo {
+    width: 80%;
+    /* text-shadow: 3px 3px; */
+}
+
+@media (min-width: 600px) {
+    .desktop-logo {
+        height: 300px;
+        width: 300px;
+    }
+}
