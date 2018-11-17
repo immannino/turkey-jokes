@@ -1,3 +1,7 @@
+.asset-button {
+    height: 25px;
+}
+
 @media (min-width: 600px) {
     .desktop-size {
         font-size: 4rem;

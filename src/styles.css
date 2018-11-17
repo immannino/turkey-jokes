@@ -111,3 +111,20 @@
         border: 5px solid #91371B;
     }
 }
+
+/* .chicken {
+    background-image: url(./assets/cooked_chicken.png);
+    background-color: #D4C2B2;
+} */
+
+/*
+Edit thebackground-image html asset to repeat by the desired size.
+*/
+/* .chicken {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="35"><image width="29" height="24" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAYCAMAAAAxgAaOAAAAS1BMVEUAAABIKAFIKAFYMgFYMgFnPAFnPAFvQQR4RwR4RwR4RwRrZmN1bmt5c259eHV9eHWBTQSKUwSKUwSSWAeGf32IgX6Nh4OTjIkAAAB6GLB9AAAAGXRSTlP///////////////////////////////8AATQKtwAAAOVJREFUKFNt0YGugyAMBdBrmgaS6dKG7T3//0vXCzhQ1xiJHCm0YL8E0IbpPeH65BTq+67P94od2/uX4vF6xRS2v7sCoqaxFOv/TcNyJqqsm+CkgKaOMebzWiyxkBiaL4qGGagp7KRYhJYkItQsT91omFRF4pFkziRdW9akiaFxcLe8yIJDeZ66L7NrLsbvqKmqmDS02DEaQuVGLbuwQqvhFomLWyuq1qc0b2HqXkr9kxqYBgZTOVIHljrJ6cibaklxLQNrdO+9ihObDSzesw6dsKf/dhIXLQ4cl0P1Wb909PkU+xQfHbAoB93NWogAAAAASUVORK5CYII=" /></svg>');
+    background-position: left center;
+}
+
+.chicken::after {
+    opacity: 0.5;
+} */
