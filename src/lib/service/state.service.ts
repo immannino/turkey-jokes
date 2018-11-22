@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Subject } from "rxjs";
+import { jokes } from "./turkey-jokes";
 
 @Injectable()
 export class StateService {
@@ -30,7 +31,9 @@ export class StateService {
         this.setState({
             shouldShowAnswer: false,
             isAnswerButtonEnabled: true,
-            answerButtonText: 'Show Answer'
+            answerButtonText: 'Show Answer',
+            jokeCount: 0,
+            totalJokes: jokes.length
         });
     }
 }
@@ -39,4 +42,6 @@ export class State {
     shouldShowAnswer: boolean;
     isAnswerButtonEnabled: boolean;
     answerButtonText: string;
+    jokeCount: number;
+    totalJokes: number;
 }

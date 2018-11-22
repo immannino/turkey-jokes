@@ -4,6 +4,11 @@
         <section class="pacifico white f3 desktop-size">thanksgiving</section>
         <button class="vintage cabin" (click)="reset()">Reset</button>
     </div>
+    <div class="center pa3 tc w-30 ">
+        <div class="vintage">
+            {{state.jokeCount}}/{{state.totalJokes}}
+        </div>
+    </div>
     <div *ngIf="activeJoke" class="pa3 center">
         <div class="box-shadow bg-light-beige cabin f2 pa2 desktop-question center">
             <div>{{activeJoke.question}}</div>

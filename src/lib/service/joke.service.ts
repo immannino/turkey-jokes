@@ -1,13 +1,15 @@
 import { Injectable } from "@angular/core";
 import { Joke, jokes } from "./turkey-jokes";
 import { Subject } from "rxjs";
+import { StateService } from "./state.service";
 
 @Injectable()
 export class JokeService {
     jokesCopy: Joke[];
     usedJokes: Joke[];
     jokeSubject: Subject<Joke> = new Subject<Joke>();
-    constructor() {
+
+    constructor(private state: StateService) {
         this.jokesCopy = this.generateJokesArray();
         this.usedJokes = new Array<Joke>();
     }
@@ -34,6 +36,11 @@ export class JokeService {
             this.usedJokes.push(temp);
         }
 
+        this.state.updateState({
+            ...this.state.getState(),
+            jokeCount: this.usedJokes.length
+        });
+
         return temp;
     }
 
@@ -42,6 +49,10 @@ export class JokeService {
     }
 
     resetCount() {
+        this.state.updateState({
+            ...this.state.getState(),
+            jokeCount: 0
+        });
         this.jokesCopy = this.generateJokesArray();
         this.getAJoke();
     }
